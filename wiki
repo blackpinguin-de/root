@@ -1,0 +1,1 @@
+/rcl/data/var/lib/mediawiki/
