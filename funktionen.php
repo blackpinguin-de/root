@@ -43,8 +43,8 @@ function bb($text){
     $text = eregi_replace("\[b\]([^\[]+)\[/b\]","<b>\\1</b>",$text);
     $text = eregi_replace("\[i\]([^\[]+)\[/i\]","<i>\\1</i>",$text);
     $text = eregi_replace("\[u\]([^\[]+)\[/u\]","<u>\\1</u>",$text);
-    $text = eregi_replace("\[url\]([^\[]+)\[/url\]","<a href=\"\\1\" target=\"_blank\">\\1</a>",$text);
-    $text = eregi_replace("\[url=\"([^\"]+)\"]([^\[]+)\[/url\]","<a href=\"\\1\" target=\"_blank\">\\2</a>",$text);
+    $text = eregi_replace("\[url\]([^\[]+)\[/url\]","<a href=\"\\1\" target=\"_blank\" rel=\"noopener\">\\1</a>",$text);
+    $text = eregi_replace("\[url=\"([^\"]+)\"]([^\[]+)\[/url\]","<a href=\"\\1\" target=\"_blank\" rel=\"noopener\">\\2</a>",$text);
   }
   $text = str_replace("\n", "<br />", $text);
   return $text;

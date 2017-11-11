@@ -129,25 +129,25 @@ public function impressum(){
             "E-Mail",
             $this->jsenc(
                  "<a href='mailto:rcl@blackpinguin.de'>rcl@blackpinguin.de</a>"
-                ." <a class='extern' target='_blank' href='https://ext.blackpinguin.de/certs/rclbp.smime'>S/MIME</a>"
-                ." <a class='extern' target='_blank' href='https://ext.blackpinguin.de/certs/rclbp.pgp'>PGP</a>"
+                ." <a class='extern' target='_blank' rel='noopener' href='https://ext.blackpinguin.de/certs/rclbp.smime'>S/MIME</a>"
+                ." <a class='extern' target='_blank' rel='noopener' href='https://ext.blackpinguin.de/certs/rclbp.pgp'>PGP</a>"
                 ."<br/><a href='mailto:robin.ladiges@web.de'>robin.ladiges@web.de</a>"
-                ." <a class='extern' target='_blank' href='https://ext.blackpinguin.de/certs/rlweb.smime'>S/MIME</a>"
-                ." <a class='extern' target='_blank' href='https://ext.blackpinguin.de/certs/rlweb.pgp'>PGP</a>"
+                ." <a class='extern' target='_blank' rel='noopener' href='https://ext.blackpinguin.de/certs/rlweb.smime'>S/MIME</a>"
+                ." <a class='extern' target='_blank' rel='noopener' href='https://ext.blackpinguin.de/certs/rlweb.pgp'>PGP</a>"
             ),
             "height: 44px;", "height: 44px;"
         ), array(
             "XMPP (Jabber)",
             $this->jsenc("<a href='xmpp:rcl@xmpp.blackpinguin.de?message'>rcl@xmpp.blackpinguin.de</a>")
-                ."<br/><a class='extern' target='_blank' href='https://en.wikipedia.org/wiki/Off-the-Record_Messaging'>OTR</a> ".$this->lang("F","f")."ingerprint: "
+                ."<br/><a class='extern' target='_blank' rel='noopener' href='https://en.wikipedia.org/wiki/Off-the-Record_Messaging'>OTR</a> ".$this->lang("F","f")."ingerprint: "
                 ."<span style='font-size: 10px;' class='style-hell'>E500CF7A 3285F36F 79FFADF3 CB381D44 1BF9096E</span>",
             "height: 44px;", "height: 44px;"
         ), array(
             "Twitter",
-            "<a class='extern' target='_blank' href='https://twitter.com/Istador'>@Istador</a>"
+            "<a class='extern' target='_blank' rel='noopener' href='https://twitter.com/Istador'>@Istador</a>"
         ), array(
             "ICQ",
-            "<a class='extern' target='_blank' href='http://www.icq.com/people/342538015/'>342-538-015</a><br/><a class='extern' target='_blank' href='http://www.icq.com/people/176736534/' style='text-decoration: line-through;'>176-736-534</a> (".$this->lang("stillgelegt","inoperative").")",
+            "<a class='extern' target='_blank' rel='noopener' href='http://www.icq.com/people/342538015/'>342-538-015</a><br/><a class='extern' target='_blank' rel='noopener' href='http://www.icq.com/people/176736534/' style='text-decoration: line-through;'>176-736-534</a> (".$this->lang("stillgelegt","inoperative").")",
             "height: 44px;", "height: 44px;"
         ), array(
             "Skype",
@@ -164,7 +164,7 @@ public function impressum(){
 </style>
 <div style='width: 100%; position: static;'>
     <div style='width: 100%; text-align: center; font-size:15px; font-weight: bold;'>
-        ".$this->lang("Inhaltlich verantwortlich im Sinne von", "Legally responsible according to")." <a class='extern' target='_blank' href='http://bundesrecht.juris.de/tmg/__5.html'>§ 5 TMG</a>
+        ".$this->lang("Inhaltlich verantwortlich im Sinne von", "Legally responsible according to")." <a class='extern' target='_blank' rel='noopener' href='http://bundesrecht.juris.de/tmg/__5.html'>§ 5 TMG</a>
     </div>
 ";
 
