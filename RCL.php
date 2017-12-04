@@ -124,7 +124,7 @@ public function impressum(){
         ), array(
         ), array(
             $this->lang("Telefon", "Phone"),
-            "+49 (0) 40 / 40 16 30 38"
+            "+49 (0) 40 / 40 16 30 38 " . $this->lang("(So - Do: 20-23 Uhr)", "(Sun - Thu: 8-11 pm ".date("T").")")
         ), array(
             "E-Mail",
             $this->jsenc(
@@ -132,7 +132,7 @@ public function impressum(){
                 ." <a class='extern' target='_blank' rel='noopener' href='https://ext.blackpinguin.de/certs/rclbp.smime'>S/MIME</a>"
                 ." <a class='extern' target='_blank' rel='noopener' href='https://ext.blackpinguin.de/certs/rclbp.pgp'>PGP</a>"
                 ."<br/><a href='mailto:robin.ladiges@web.de'>robin.ladiges@web.de</a>"
-                ." <a class='extern' target='_blank' rel='noopener' href='https://ext.blackpinguin.de/certs/rlweb.smime'>S/MIME</a>"
+                ." <a class='extern' target='_blank' rel='noopener' style='text-decoration: line-through;' href='https://ext.blackpinguin.de/certs/rlweb.smime'>S/MIME</a> " . $this->lang("(abgelaufen)", "(expired)")
                 ." <a class='extern' target='_blank' rel='noopener' href='https://ext.blackpinguin.de/certs/rlweb.pgp'>PGP</a>"
             ),
             "height: 44px;", "height: 44px;"
