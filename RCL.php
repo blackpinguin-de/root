@@ -132,7 +132,7 @@ public function impressum(){
                 ." <a class='extern' target='_blank' rel='noopener' href='https://ext.blackpinguin.de/certs/rclbp.smime'>S/MIME</a>"
                 ." <a class='extern' target='_blank' rel='noopener' href='https://ext.blackpinguin.de/certs/rclbp.pgp'>PGP</a>"
                 ."<br/><a href='mailto:robin.ladiges@web.de'>robin.ladiges@web.de</a>"
-                ." <a class='extern' target='_blank' rel='noopener' style='text-decoration: line-through;' href='https://ext.blackpinguin.de/certs/rlweb.smime'>S/MIME</a> " . $this->lang("(abgelaufen)", "(expired)")
+                ." <a class='extern' target='_blank' rel='noopener' href='https://ext.blackpinguin.de/certs/rlweb.smime'>S/MIME</a> "
                 ." <a class='extern' target='_blank' rel='noopener' href='https://ext.blackpinguin.de/certs/rlweb.pgp'>PGP</a>"
             ),
             "height: 44px;", "height: 44px;"
@@ -151,7 +151,7 @@ public function impressum(){
             "height: 44px;", "height: 44px;"
         ), array(
             "Skype",
-            "<a href='skype:blackpinguin?chat' style='text-decoration: line-through;'>blackpinguin</a> (".$this->lang("stillgelegt","inoperative").")"
+            "<a href='skype:blackpinguin?chat'>blackpinguin</a>"
         )
     );
 
@@ -183,6 +183,15 @@ foreach($arr as $i => $entry){
     }
     echo "</div>";
 }
+
+//+++   London
+echo "<span style='display: inline-block; margin: 10px 0; padding: 10px; color: red; background-color: yellow;'>";
+echo $this->lang(
+	"Vom 06. bis 17.05.2019 bin ich verreist und deshalb nicht zu erreichen.",
+	"I am traveling between 2019-05-06 and 2019-05-17 and therefore can not be contacted in any way."
+);
+echo "</span>";
+//---   London
 
 echo "</div>";
 }
