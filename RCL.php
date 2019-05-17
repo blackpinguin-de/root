@@ -184,14 +184,14 @@ foreach($arr as $i => $entry){
     echo "</div>";
 }
 
-//+++   London
-echo "<span style='display: inline-block; margin: 10px 0; padding: 10px; color: red; background-color: yellow;'>";
-echo $this->lang(
-	"Vom 06. bis 17.05.2019 bin ich verreist und deshalb nicht zu erreichen.",
-	"I am traveling between 2019-05-06 and 2019-05-17 and therefore can not be contacted in any way."
-);
-echo "</span>";
-//---   London
+//+++   Abwesenheit
+#echo "<span style='display: inline-block; margin: 10px 0; padding: 10px; color: red; background-color: yellow;'>";
+#echo $this->lang(
+#	"Vom 06. bis 17.05.2019 bin ich verreist und deshalb nicht zu erreichen.",
+#	"I am traveling between 2019-05-06 and 2019-05-17 and therefore can not be contacted in any way."
+#);
+#echo "</span>";
+//---   Abwesenheit
 
 echo "</div>";
 }
