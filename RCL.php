@@ -335,15 +335,26 @@ public function contact_gen_nounce(){
 }
 
 public function contact_js(){
-    return "function(n,s){"
-            ."s=s.trim().replace(/[^a-z0-9]/gi,'');"
-            ."var c=n;"
-            ."for(var i=0;i<s.length;i++){"
-                ."c=c^((c<<8)^s.charCodeAt(i));"
+    return "function (n,s) {"
+            ."s = s.trim().replace(/[^a-z0-9]/gi, '');"
+            ."var c = n;"
+            ."for(var i=0; i < s.length; i++){"
+                ."c ^= (c << 8 & 0x7fffffff) ^ s.charCodeAt(i);"
             ."}"
-            ."return Math.abs(c^~n);"
+            ."return Math.abs(c ^ ~n);"
         ."}"
     ;
+}
+
+private function contact_secret($text, $nounce) {
+    $strip = preg_replace("/[^a-z0-9]/i", "", $text);
+    $nounce = (int) $nounce;
+    $code = $nounce;
+    for ($i = 0; $i < strlen($strip); $i++){
+        $code ^= ($code << 8 & 0x7fffffff) ^ ord($strip[$i]);
+    }
+    $code = abs($code ^ ~$nounce);
+    return $code;
 }
 
 public function contact_send($system, $id_id, $id_secret, $id_email, $subject_id, $id_text){
@@ -373,15 +384,11 @@ public function contact_send($system, $id_id, $id_secret, $id_email, $subject_id
         if(strlen($_subject) < 5 || strlen($subject) > 80){sleep(3); return 4;}
 
         // Validate Secret derived from Text and Nounce (Error 5)
-        $strip = preg_replace("/[^a-z0-9]/i", "", $text);
+        $strip  = preg_replace("/[^a-z0-9]/i", "", $text);
         $secret = (int) trim(post($id_secret));
         $nounce = (int) $_SESSION['RCL::contact-nounce'];
-        $code = $nounce;
-        for($i = 0; $i < strlen($strip); $i++){
-            $code = ($code ^ (($code << 8) ^ ord($strip[$i]))) & 0x7fffffff;
-        }
-        $code = abs($code ^ ~$nounce);
-        if($code !== $secret){sleep(3); echo "g"; return 5;}
+        $code   = $this->contact_secret($strip, $nounce);
+        if($code !== $secret){sleep(3); return 5;}
 
         // Validate Time (Error 7)
         $now = (int) time();
