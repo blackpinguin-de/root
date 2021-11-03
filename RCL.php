@@ -140,7 +140,7 @@ public function impressum(){
             "XMPP (Jabber)",
             $this->jsenc("<a href='xmpp:rcl@xmpp.blackpinguin.de?message'>rcl@xmpp.blackpinguin.de</a>")
                 ."<br/><a class='extern' target='_blank' rel='noopener' href='https://en.wikipedia.org/wiki/Off-the-Record_Messaging'>OTR</a> ".$this->lang("F","f")."ingerprint: "
-                ."<span style='font-size: 10px;' class='style-hell'>E500CF7A 3285F36F 79FFADF3 CB381D44 1BF9096E</span>",
+                ."<span style='font-size: 10px;' class='style-hell'>B08F37AF 9D56F765 75413EBA 76F110FB 1E7F1525</span>",
             "height: 44px;", "height: 44px;"
         ), array(
             "Twitter",
@@ -375,6 +375,7 @@ public function contact_send($system, $id_id, $id_secret, $id_email, $subject_id
 
         // Validate Text (Error 3)
         $text = trim(post($id_text));
+        $text = str_replace(['\r\n', '\r', '\n'], PHP_EOL, $text);
         $_text = preg_replace('/\s/i', '', $text);
         if(strlen($_text) < 20 || strlen($text) > 3000){sleep(3); return 3;}
 
