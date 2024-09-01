@@ -143,13 +143,6 @@ public function impressum(){
                 ."<span style='font-size: 10px;' class='style-hell'>B08F37AF 9D56F765 75413EBA 76F110FB 1E7F1525</span>",
             "height: 44px;", "height: 44px;"
         ), array(
-            "Twitter",
-            "<a class='extern' target='_blank' rel='noopener' href='https://twitter.com/Istador'>@Istador</a>"
-        ), array(
-            "ICQ",
-            "<a class='extern' target='_blank' rel='noopener' href='http://www.icq.com/people/342538015/'>342-538-015</a><br/><a class='extern' target='_blank' rel='noopener' href='http://www.icq.com/people/176736534/' style='text-decoration: line-through;'>176-736-534</a> (".$this->lang("stillgelegt","inoperative").")",
-            "height: 44px;", "height: 44px;"
-        ), array(
             "Skype",
             "<a href='skype:blackpinguin?chat'>blackpinguin</a>"
         )
