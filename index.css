@@ -1,0 +1,28 @@
+* { font-family: helvetica; font-size: 10pt; }
+body { background-color: rgb(224, 224, 224); }
+a { color: rgb(0, 85, 0); text-decoration: none; }
+img { max-width: 100%; border: 0px none; }
+.img-box { width: 100%; text-align: center; }
+.round { border-width: 2px; border-style: outset; border-color: rgb(0, 0, 0); border-radius: 10px; }
+.sub { padding: 4px 8px; margin: 4px 0px 0px; background-color: rgb(255, 255, 153); border-color: rgb(255, 255, 153); }
+div.title { text-align: center; }
+.title { font-size: 14pt; font-weight: bold; color: rgb(0, 0, 0); }
+.header { font-size: 12pt; font-weight: bold; }
+.clickon { font-weight: bold; }
+a.clickon { color: rgb(255, 0, 0); text-decoration: underline; }
+.fingerprint { font-size: 6pt; }
+.certclass { font-size: 8pt; }
+#main { width: 100%; min-width: 550px; max-width: 1200px; margin: 0px auto; }
+#round { padding: 0px 4px 4px; background-color: rgb(170, 170, 255); border-color: rgb(170, 170, 255); }
+#url { text-align: center; font-size: 10pt; color: rgb(255, 255, 255); background-color: rgb(85, 85, 85); border-color: rgb(85, 85, 85); }
+#url-link { font-size: 20pt; display: block; background-color: rgb(85, 255, 85); border-color: rgb(85, 255, 85); }
+#solution-left { float: left; width: 50%; }
+#solution-right { float: right; width: 50%; }
+div.solution-cacert { margin-right: 2px; }
+div.solution-exception { margin-left: 2px; }
+#solution-clear { clear: both; }
+.footer { font-size: 10pt; }
+div.footer { text-align: center; height: 31px; }
+a.footer { color: rgb(0, 0, 0); font-weight: bold; }
+#cc { display: block; float: right; width: 88px; height: 31px; background-image: url('cc.png'); }
+#w3c { display: block; float: left; width: 88px; height: 31px; background-image: url('w3c.png'); }
